@@ -1,0 +1,57 @@
+body {
+  background-color: beige;
+}
+
+#grid,
+#messageParagraph {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#grid {
+  font-size: 0;
+  margin-right: 30px;
+}
+
+.square {
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid black;
+  font-size: 50px;
+  text-align: center;
+  line-height: 100px;
+  user-select: none;
+}
+
+#messageParagraph {
+  color: #ff4c00;
+  font-size: 50px;
+}
+
+#players,
+#buttons {
+  width: 306px;
+  overflow: auto;
+}
+
+#xParagraph,
+#restartButton {
+  float: left;
+}
+
+#oParagraph,
+#switchButton {
+  float: right;
+}
+
+p {
+  font-size: 24px;
+}
+
+button {
+  font-size: 18px;
+  padding: 5px;
+}
