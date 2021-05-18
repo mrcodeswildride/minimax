@@ -29,12 +29,10 @@ function switchTurn() {
   if (threeInRow(board, turn)) {
     messageParagraph.innerHTML = `${turn} wins!`
     gameOver = true
-  }
-  else if (boardIsFull(board)) {
+  } else if (boardIsFull(board)) {
     messageParagraph.innerHTML = `Tie game`
     gameOver = true
-  }
-  else {
+  } else {
     turn = turn == `X` ? `O` : `X`
 
     if (turn == ai) {
@@ -57,8 +55,7 @@ function aiMove() {
     if (score > highestScore) {
       highestScore = score
       squareIndexes = [squareIndex]
-    }
-    else if (score == highestScore) {
+    } else if (score == highestScore) {
       squareIndexes.push(squareIndex)
     }
   }
@@ -71,11 +68,9 @@ function aiMove() {
 function getScore(board, currentTurn, aiTurn) {
   if (threeInRow(board, currentTurn)) {
     return aiTurn ? 1 : -1
-  }
-  else if (boardIsFull(board)) {
+  } else if (boardIsFull(board)) {
     return 0
-  }
-  else {
+  } else {
     let nextTurn = currentTurn == `X` ? `O` : `X`
     let nextBoards = getNextBoards(board, nextTurn)
 
@@ -88,8 +83,7 @@ function getScore(board, currentTurn, aiTurn) {
       }
 
       return strongestScore
-    }
-    else {
+    } else {
       let strongestScore = -Infinity
 
       for (let nextBoard of nextBoards) {
@@ -159,11 +153,10 @@ function switchLetters() {
     xParagraph.innerHTML = `Computer is X`
     oParagraph.innerHTML = `You are O`
     switchButton.innerHTML = `Let yourself go first`
-  }
-  else {
+  } else {
     xParagraph.innerHTML = `You are X`
     oParagraph.innerHTML = `Computer is O`
-    switchButton.innerHTML = `Let computer go first`  
+    switchButton.innerHTML = `Let computer go first`
   }
 
   restart()
@@ -172,26 +165,19 @@ function switchLetters() {
 function threeInRow(board, currentTurn) {
   if (board[0] == currentTurn && board[1] == currentTurn && board[2] == currentTurn) {
     return true
-  }
-  else if (board[3] == currentTurn && board[4] == currentTurn && board[5] == currentTurn) {
+  } else if (board[3] == currentTurn && board[4] == currentTurn && board[5] == currentTurn) {
     return true
-  }
-  else if (board[6] == currentTurn && board[7] == currentTurn && board[8] == currentTurn) {
+  } else if (board[6] == currentTurn && board[7] == currentTurn && board[8] == currentTurn) {
     return true
-  }
-  else if (board[0] == currentTurn && board[3] == currentTurn && board[6] == currentTurn) {
+  } else if (board[0] == currentTurn && board[3] == currentTurn && board[6] == currentTurn) {
     return true
-  }
-  else if (board[1] == currentTurn && board[4] == currentTurn && board[7] == currentTurn) {
+  } else if (board[1] == currentTurn && board[4] == currentTurn && board[7] == currentTurn) {
     return true
-  }
-  else if (board[2] == currentTurn && board[5] == currentTurn && board[8] == currentTurn) {
+  } else if (board[2] == currentTurn && board[5] == currentTurn && board[8] == currentTurn) {
     return true
-  }
-  else if (board[0] == currentTurn && board[4] == currentTurn && board[8] == currentTurn) {
+  } else if (board[0] == currentTurn && board[4] == currentTurn && board[8] == currentTurn) {
     return true
-  }
-  else if (board[2] == currentTurn && board[4] == currentTurn && board[6] == currentTurn) {
+  } else if (board[2] == currentTurn && board[4] == currentTurn && board[6] == currentTurn) {
     return true
   }
 

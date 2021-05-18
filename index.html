@@ -1,47 +1,43 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Tic-tac-toe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
 
-<head>
-	<title>Tic-tac-toe</title>
-	<meta name="viewport" content="width=device-width, initial-scale=0.5">
-	<link href="style.css" rel="stylesheet">
-	<script src="script.js" defer>
+  <body>
+    <h1>Tic-tac-toe</h1>
 
-	</script>
-</head>
+    <div id="grid">
+      <div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+      <div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+      <div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+    </div>
 
-<body>
-	<h1>Tic-tac-toe</h1>
+    <p id="messageParagraph"></p>
 
-	<div id="grid">
-		<div>
-			<div class="square"></div>
-			<div class="square"></div>
-			<div class="square"></div>
-		</div>
-		<div>
-			<div class="square"></div>
-			<div class="square"></div>
-			<div class="square"></div>
-		</div>
-		<div>
-			<div class="square"></div>
-			<div class="square"></div>
-			<div class="square"></div>
-		</div>
-	</div>
+    <div id="players">
+      <p id="xParagraph">You are X</p>
+      <p id="oParagraph">Computer is O</p>
+    </div>
 
-	<p id="messageParagraph"></p>
-
-	<div id="players">
-		<p id="xParagraph">You are X</p>
-		<p id="oParagraph">Computer is O</p>
-	</div>
-
-  <div id="buttons">
-  	<button id="restartButton">Restart</button>
-    <button id="switchButton">Let computer go first</button>
-  </div>
-</body>
-
+    <div id="buttons">
+      <button id="restartButton">Restart</button>
+      <button id="switchButton">Let computer go first</button>
+    </div>
+  </body>
 </html>
